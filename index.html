@@ -65,12 +65,49 @@
     animation: slide 22s linear infinite;
   }
 
-  .track:hover { animation-play-state: paused; }
+  .track.paused { animation-play-state: paused; }
 
   @keyframes slide {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
+
+  /* ── LIGHTBOX ── */
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.93);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  #lightbox.open { display: flex; }
+
+  #lightbox img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 12px;
+    object-fit: contain;
+    box-shadow: 0 0 40px rgba(0,200,83,.25);
+  }
+
+  #lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 4px 8px;
+  }
+
+  .card { cursor: pointer; }
 
   .card {
     flex: 0 0 230px;
@@ -488,6 +525,48 @@
 </section>
 
 <div class="sticky-spacer"></div>
+
+<!-- ═══════════════════════════════ LIGHTBOX ════════════════════════════ -->
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Fechar">✕</button>
+  <img id="lightbox-img" src="" alt="Bola ampliada">
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const lightbox = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  const lbClose = document.getElementById('lightbox-close');
+
+  // Abre lightbox ao clicar em qualquer card da esteira
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      const src = this.querySelector('img').src;
+      lbImg.src = src;
+      lightbox.classList.add('open');
+      track.classList.add('paused'); // pausa a esteira
+    });
+  });
+
+  // Fecha ao clicar no X
+  lbClose.addEventListener('click', closeLightbox);
+
+  // Fecha ao clicar fora da imagem
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Fecha com tecla Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    lbImg.src = '';
+    track.classList.remove('paused'); // retoma a esteira
+  }
+</script>
 
 <!-- ═══════════════════════════════ STICKY BAR ═══════════════════════════ -->
 <div class="sticky-bar">
