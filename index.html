@@ -1,150 +1,504 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="format-detection" content="telephone=no" />
-  <title>Bolas Importadas Premium | Matheus Bozó</title>
-  <meta name="description" content="Bolas importadas premium em PU. Veja os modelos e fale no WhatsApp para garantir a sua por R$149,90." />
-  <meta name="theme-color" content="#050505" />
-  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
-  <style>
-    :root{--bg:#050505;--panel:#101012;--panel2:#151518;--line:rgba(255,255,255,.08);--text:#f5f5f5;--muted:#a9a9b0;--gold:#ffc83d;--shadow:0 20px 50px rgba(0,0,0,.42);--max:1120px}
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'General Sans',Arial,sans-serif;background:radial-gradient(circle at top,rgba(255,200,61,.08),transparent 24%),var(--bg);color:var(--text);min-height:100dvh;padding-bottom:92px;line-height:1.5}
-    img{display:block;max-width:100%}
-    a{color:inherit;text-decoration:none}
-    .wrap{width:min(100%,var(--max));margin:0 auto;padding:0 16px}
-    .top{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-    .top .inner{width:min(100%,var(--max));margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:700}
-    .mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#1f1f21,#0f5c46);box-shadow:var(--shadow)}
-    .mark svg{width:22px;height:22px;color:#fff}
-    .pill{font-size:.72rem;font-weight:800;color:#111;background:var(--gold);padding:8px 10px;border-radius:999px;white-space:nowrap}
-    .hero{padding:22px 0 14px}
-    .card{background:linear-gradient(180deg,#131316,#0b0b0c);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
-    .hero .card{padding:22px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:.78rem;font-weight:800;margin-bottom:14px}
-    h1{font-size:clamp(2rem,1.5rem + 3.5vw,3.1rem);line-height:1.02;letter-spacing:-.04em;max-width:12ch}
-    .hero p{color:var(--muted);margin-top:12px;max-width:36ch}
-    .priceRow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0}
-    .price{font-size:clamp(2rem,1.4rem + 3vw,3rem);line-height:1;font-weight:900;letter-spacing:-.05em}
-    .sub{color:#111;background:var(--gold);padding:8px 12px;border-radius:999px;font-size:.76rem;font-weight:900}
-    .ctaStack{display:grid;gap:12px}
-    .btn{min-height:54px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;padding:0 18px;transition:transform .15s ease,background .15s ease}
-    .btn:active{transform:scale(.98)}
-    .btn-wa{background:var(--gold);color:#111;box-shadow:0 12px 30px rgba(255,200,61,.18)}
-    .btn-wa:hover{background:#f2bb2a}
-    .btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff}
-    .proof{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .proof div{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:10px}
-    .proof strong{display:block;font-size:.88rem}.proof span{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
-    .sec{padding-top:28px}
-    .head{display:grid;gap:6px;margin-bottom:14px}
-    .head h2{font-size:clamp(1.35rem,1rem + 1.6vw,1.95rem);line-height:1.08;letter-spacing:-.03em}
-    .head p{color:var(--muted);font-size:.95rem}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;align-items:start}
-    .item{background:linear-gradient(180deg,#131316,#0d0d0f);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
-    .photoWrap{width:100%;background:#0b0b0c}
-    .photo{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;display:block}
-    .meta{padding:14px;display:grid;gap:10px}
-    .name{font-size:1.02rem;line-height:1.08;font-weight:900}
-    .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-    .money{font-size:1.15rem;font-weight:900;letter-spacing:-.03em}
-    .benefits,.faq{display:grid;gap:12px}
-    .box{background:linear-gradient(180deg,#121214,#0d0d0e);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}
-    .box strong{display:block;font-size:.95rem;margin-bottom:4px}.box p{color:var(--muted);font-size:.92rem}
-    details{background:linear-gradient(180deg,#121214,#0d0d0e);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}
-    summary{list-style:none;cursor:pointer;font-weight:900;font-size:.94rem;padding-right:24px;position:relative}
-    summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";position:absolute;right:0;top:-1px;color:var(--gold);font-size:1.1rem}
-    details[open] summary::after{content:"–"}
-    details p{margin-top:10px;color:var(--muted);font-size:.92rem}
-    .highlight{background:linear-gradient(180deg,#101010,#0a0a0b);border:1px solid rgba(255,200,61,.18);border-radius:26px;padding:18px;box-shadow:var(--shadow);display:grid;gap:10px}
-    .alert{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:900;color:var(--gold)}
-    .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(5,5,5,0),rgba(5,5,5,.92) 22%,rgba(5,5,5,1));backdrop-filter:blur(10px)}
-    .sticky .btn{width:min(100%,var(--max));margin:0 auto;display:flex}
-    @media (min-width: 860px){
-      .hero .card{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center}
-      .hero-copy{padding-right:12px}
-      .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .proof{grid-template-columns:repeat(3,1fr)}
-    }
-    @media (max-width: 859px){
-      .gallery{grid-template-columns:1fr}
-    }
-    @media (min-width: 1200px){
-      .wrap{max-width:1160px}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
-    }
-    @media (min-width: 640px) and (max-width: 859px){
-      .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-    @media (max-width: 420px){
-      .proof{grid-template-columns:1fr;}
-      .top .inner{padding:12px 12px}
-      .wrap{padding:0 12px}
-    }
-    @media (min-width:640px){
-      body{padding-bottom:18px}
-      .sticky{width:min(100%,var(--max));left:50%;right:auto;transform:translateX(-50%);background:none;padding-inline:16px}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bola Importada Premium – Qualidade Profissional</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #00C853;
+    --green-dark: #009624;
+    --black: #0A0A0A;
+    --gray: #1A1A1A;
+    --gray2: #2A2A2A;
+    --white: #FFFFFF;
+    --text-muted: #888;
+    --radius: 14px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    overflow-x: hidden;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  /* ── ESTEIRA ── */
+  .carousel-section {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .badge-topo {
+    background: var(--green);
+    color: var(--black);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 7px 0;
+  }
+
+  .track-wrap {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .track {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0 8px;
+    width: max-content;
+    animation: slide 22s linear infinite;
+  }
+
+  .track:hover { animation-play-state: paused; }
+
+  @keyframes slide {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .card {
+    flex: 0 0 230px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    border: 1.5px solid #222;
+    background: var(--gray);
+  }
+
+  .card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.85));
+    padding: 32px 10px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: .04em;
+  }
+
+  .price-tag {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 900;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-top: 4px;
+  }
+
+  /* ── HERO TEXT ── */
+  .hero {
+    padding: 20px 18px 0;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: .02em;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .hero h1 span { color: var(--green); }
+
+  .hero p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 18px;
+  }
+
+  /* ── CTA PRIMÁRIO ── */
+  .btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--green);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 900;
+    padding: 16px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 100%;
+    letter-spacing: .01em;
+    transition: background .2s;
+  }
+  .btn-whatsapp:active { background: var(--green-dark); }
+
+  .btn-whatsapp svg { flex-shrink: 0; }
+
+  /* ── URGÊNCIA ── */
+  .urgency {
+    background: #1a0000;
+    border: 1px solid #4d0000;
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #ff6b6b;
+    text-align: center;
+    font-weight: 600;
+    margin: 14px 18px 0;
+  }
+
+  .urgency span { font-size: 18px; }
+
+  /* ── DIFERENCIAIS ── */
+  .section { padding: 24px 18px 0; }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: .03em;
+    margin-bottom: 14px;
+    color: var(--white);
+  }
+
+  .feat-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  .feat-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--gray);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    font-size: 13.5px;
+    color: #ccc;
+    border-left: 3px solid var(--green);
+  }
+
+  .feat-list li .icon { font-size: 18px; flex-shrink: 0; line-height: 1.3; }
+
+  .feat-title { font-weight: 700; color: var(--white); display: block; font-size: 13px; }
+
+  /* ── GALERIA EXTRA ── */
+  .gallery-section { padding: 24px 18px 0; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* ── FAQ ── */
+  .faq { padding: 24px 18px 0; }
+
+  .faq-item {
+    border-bottom: 1px solid #222;
+    padding: 14px 0;
+  }
+
+  .faq-q {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .faq-q::before {
+    content: '⚽';
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .faq-a {
+    font-size: 13px;
+    color: #aaa;
+    padding-left: 26px;
+  }
+
+  /* ── FRETE ── */
+  .frete {
+    margin: 20px 18px 0;
+    background: var(--gray);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--green);
+  }
+  .frete span { font-size: 28px; }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    padding: 28px 18px 40px;
+    text-align: center;
+  }
+
+  .cta-final p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 10px;
+  }
+
+  .price-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .price-label {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* ── STICKY FOOTER ── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--black);
+    border-top: 1px solid #222;
+    padding: 10px 18px 14px;
+    max-width: 430px;
+    margin: 0 auto;
+    z-index: 99;
+  }
+
+  .sticky-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--green);
+    color: var(--black);
+    font-size: 15px;
+    font-weight: 900;
+    padding: 13px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+
+  /* espaço para não tapar conteúdo */
+  .sticky-spacer { height: 70px; }
+</style>
 </head>
 <body>
-  <header class="top">
-    <div class="inner">
-      <div class="brand"><div class="mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="3.2"/><path d="M32 14L41.5 20.8L37.9 31.8H26.1L22.5 20.8L32 14Z" fill="currentColor"/><path d="M22.5 20.8L14 28.5L18.2 41L30.1 41.2L37.9 31.8" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M41.5 20.8L50 28.5L45.8 41L33.9 41.2L26.1 31.8" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div><span>Matheus Bozó</span></div>
-      <div class="pill">Frete grátis para Viçosa/MG</div>
-    </div>
-  </header>
 
-  <main class="wrap" id="conteudo">
-    <section class="hero">
+<!-- ═══════════════════════════════ ESTEIRA ══════════════════════════════ -->
+<section class="carousel-section">
+  <div class="badge-topo">⚡ Estoque Limitado – Garanta a Sua Agora!</div>
+  <div class="track-wrap">
+    <div class="track" id="track">
+      <!-- 5 modelos principais com label e preço -->
       <div class="card">
-        <div class="hero-copy">
-          <div class="eyebrow">⚽ Bola importada premium em PU</div>
-          <h1>Qualidade de verdade para jogar em alto nível.</h1>
-          <p>Toque macio, controle preciso, acabamento profissional e visual premium para reduzir dúvidas e aumentar a vontade de chamar no WhatsApp.</p>
-          <div class="priceRow"><div class="price">R$149,90</div><div class="sub">Estoque limitado</div></div>
-          <div class="ctaStack"><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20garantir%20minha%20bola%20premium%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Garantir minha bola no WhatsApp</a><a class="btn btn-ghost" href="#modelos">Ver modelos disponíveis</a></div>
-          <div class="proof"><div><strong>PU premium</strong><span>Mais toque</span></div><div><strong>Peso oficial</strong><span>Boa resposta</span></div><div><strong>Visual forte</strong><span>Mais desejo</span></div></div>
-        </div>
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_01.jpg" alt="Modelo 01" loading="eager">
+        <div class="card-label">Modelo 01<br><span class="price-tag">R$149,90</span></div>
       </div>
-    </section>
-
-    <section class="sec" id="modelos">
-      <div class="head"><h2>Modelos disponíveis para você escolher.</h2><p>As imagens aparecem no tamanho original do arquivo e o layout se adapta ao celular e ao computador sem distorcer a bola.</p></div>
-      <div class="gallery">
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_01.jpg" alt="Bola Torque Pro" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Torque Pro</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Torque%20Pro%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_02.jpg" alt="Bola Impact Elite" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Impact Elite</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Impact%20Elite%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_03.jpg" alt="Bola Veloz Match" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Veloz Match</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Veloz%20Match%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_04.jpg" alt="Bola Campo Prime" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Campo Prime</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Campo%20Prime%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_05.jpg" alt="Bola Domínio Max" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Domínio Max</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Dom%C3%ADnio%20Max%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_06.jpg" alt="Bola Torque Pro" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Torque Pro</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20mais%20detalhes%20da%20bola%20Torque%20Pro%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_07.jpg" alt="Bola Impact Elite" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Impact Elite</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20mais%20detalhes%20da%20bola%20Impact%20Elite%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_08.jpg" alt="Bola Veloz Match" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Veloz Match</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20mais%20detalhes%20da%20bola%20Veloz%20Match%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_09.jpg" alt="Bola Campo Prime" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Campo Prime</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20mais%20detalhes%20da%20bola%20Campo%20Prime%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_10.jpg" alt="Bola Domínio Max" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Domínio Max</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20mais%20detalhes%20da%20bola%20Dom%C3%ADnio%20Max%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
-        <article class="item"><div class="photoWrap"><img class="photo" src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_11.jpg" alt="Bola Linha Premium" width="1080" height="1080" loading="lazy" decoding="async"></div><div class="meta"><div class="name">Linha Premium</div><div class="row"><div class="money">R$149,90</div><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20a%20bola%20Linha%20Premium%20por%20R%24149%2C90." target="_blank" rel="noopener noreferrer">Quero essa</a></div></div></article>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_02.jpg" alt="Modelo 02" loading="eager">
+        <div class="card-label">Modelo 02<br><span class="price-tag">R$149,90</span></div>
       </div>
-    </section>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_03.jpg" alt="Modelo 03" loading="eager">
+        <div class="card-label">Modelo 03<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_04.jpg" alt="Modelo 04" loading="eager">
+        <div class="card-label">Modelo 04<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_05.jpg" alt="Modelo 05" loading="eager">
+        <div class="card-label">Modelo 05<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <!-- duplicata para loop contínuo -->
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_01.jpg" alt="Modelo 01" loading="lazy">
+        <div class="card-label">Modelo 01<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_02.jpg" alt="Modelo 02" loading="lazy">
+        <div class="card-label">Modelo 02<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_03.jpg" alt="Modelo 03" loading="lazy">
+        <div class="card-label">Modelo 03<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_04.jpg" alt="Modelo 04" loading="lazy">
+        <div class="card-label">Modelo 04<br><span class="price-tag">R$149,90</span></div>
+      </div>
+      <div class="card">
+        <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_05.jpg" alt="Modelo 05" loading="lazy">
+        <div class="card-label">Modelo 05<br><span class="price-tag">R$149,90</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="sec">
-      <div class="head"><h2>Por que essa bola impressiona logo no primeiro toque.</h2><p>O layout muda conforme o dispositivo, mas cada imagem continua quadrada e íntegra, sem deformar a bola.</p></div>
-      <div class="benefits"><div class="box"><strong>Material PU premium.</strong><p>Muito superior ao PVC comum, com toque mais macio, melhor controle e sensação mais profissional.</p></div><div class="box"><strong>Acabamento profissional.</strong><p>Costuras e construção feitas para suportar treinos frequentes, jogos intensos e uso constante.</p></div><div class="box"><strong>Controle e precisão.</strong><p>Superfície que ajuda no domínio, passe, condução e finalização com resposta mais consistente.</p></div><div class="box"><strong>Peso e tamanho oficiais.</strong><p>Ideal para campo, treino, jogos entre amigos e campeonatos amadores com sensação de bola de verdade.</p></div></div>
-    </section>
+<!-- ═══════════════════════════════ HERO ═════════════════════════════════ -->
+<section class="hero">
+  <p class="eyebrow">⚽ Bola Importada Premium</p>
+  <h1>A bola que seu jogo<br><span>merecia</span> há muito tempo.</h1>
+  <p>Material PU de alto padrão. Toque profissional. Visual que impressiona. Por um preço que você não esperava.</p>
+  <a class="btn-whatsapp" href="https://wa.me/5531995135007?text=Ol%C3%A1%20Matheus%2C%20vi%20a%20bola%20importada%20e%20quero%20garantir%20a%20minha!%20%E2%9A%BD" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.524 5.855L0 24l6.305-1.498A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.213-3.735.887.937-3.63-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    Quero garantir a minha agora!
+  </a>
+</section>
 
-    <section class="sec">
-      <div class="head"><h2>Decida sem medo.</h2><p>As dúvidas mais comuns antes de chamar no WhatsApp.</p></div>
-      <div class="faq"><details><summary>A bola é realmente boa?</summary><p>Sim. Ela é fabricada em PU, material usado em bolas de categoria superior, entregando toque, controle e desempenho muito acima das bolas comuns.</p></details><details><summary>Serve para jogar em campo?</summary><p>Perfeitamente. Ela foi pensada para quem busca qualidade de verdade em treinos, partidas e uso frequente.</p></details><details><summary>Vale o preço?</summary><p>Vale muito. Bolas com características semelhantes costumam aparecer por valores mais altos, e aqui você leva qualidade premium por R$149,90.</p></details><details><summary>Ela é resistente mesmo?</summary><p>Sim. O acabamento é forte e a bola foi projetada para aguentar uso recorrente sem perder qualidade rapidamente.</p></details></div>
-    </section>
+<!-- ═══════════════════════════════ URGÊNCIA ══════════════════════════════ -->
+<div class="urgency">
+  <span>⚠️</span> Estoque limitado — quando acabar, sem previsão de nova remessa.
+</div>
 
-    <section class="sec">
-      <div class="highlight"><div class="alert">⚠️ Estoque limitado e reposição incerta</div><h2>Garanta agora antes que os modelos acabem.</h2><p>Quando essas unidades saem, eu não consigo prometer quando chegam novas. Se você gostou de algum modelo, o melhor momento para reservar é agora.</p><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Vi%20a%20p%C3%A1gina%20das%20bolas%20e%20quero%20garantir%20a%20minha." target="_blank" rel="noopener noreferrer">Garantir minha bola agora</a></div>
-    </section>
-  </main>
+<!-- ═══════════════════════════════ DIFERENCIAIS ══════════════════════════ -->
+<section class="section">
+  <h2 class="section-title">Por que essa bola é diferente?</h2>
+  <ul class="feat-list">
+    <li>
+      <span class="icon">🛡️</span>
+      <div><span class="feat-title">Material PU Premium</span>Muito superior ao PVC das bolas comuns. Toque mais macio, controle real e durabilidade de verdade.</div>
+    </li>
+    <li>
+      <span class="icon">🎯</span>
+      <div><span class="feat-title">Controle & Precisão</span>Superfície texturizada que melhora domínio, passes e finalizações em cada jogada.</div>
+    </li>
+    <li>
+      <span class="icon">🚀</span>
+      <div><span class="feat-title">Ótima Estabilidade de Voo</span>Chutes mais consistentes e trajetória previsível em cruzamentos e lançamentos.</div>
+    </li>
+    <li>
+      <span class="icon">💪</span>
+      <div><span class="feat-title">Alta Durabilidade</span>Feita para aguentar treinos frequentes e partidas amadoras sem perder qualidade.</div>
+    </li>
+    <li>
+      <span class="icon">📐</span>
+      <div><span class="feat-title">Peso e Tamanho Oficiais</span>Ideal para treinos, rachas, campeonatos amadores e quem exige qualidade profissional.</div>
+    </li>
+    <li>
+      <span class="icon">🔥</span>
+      <div><span class="feat-title">Design Importado e Exclusivo</span>Modelos com visual diferenciado que chamam atenção dentro e fora de campo.</div>
+    </li>
+  </ul>
+</section>
 
-  <div class="sticky"><a class="btn btn-wa" href="https://wa.me/5531995135007?text=Ol%C3%A1%2C%20Matheus!%20Quero%20garantir%20minha%20bola%20premium%20agora." target="_blank" rel="noopener noreferrer">Falar com Matheus no WhatsApp</a></div>
+<!-- ═══════════════════════════════ GALERIA EXTRA ═══════════════════════ -->
+<section class="gallery-section">
+  <h2 class="section-title" style="padding: 0 0 14px;">Veja de perto</h2>
+  <div class="gallery-grid">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_06.jpg" alt="" loading="lazy">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_07.jpg" alt="" loading="lazy">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_08.jpg" alt="" loading="lazy">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_09.jpg" alt="" loading="lazy">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_10.jpg" alt="" loading="lazy" style="grid-column: span 1;">
+    <img src="https://cutmzbojcqnmksvbyybm.supabase.co/storage/v1/object/public/bolas/model_11.jpg" alt="" loading="lazy">
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FAQ ══════════════════════════════════ -->
+<section class="faq">
+  <h2 class="section-title">Dúvidas Frequentes</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">A bola é realmente boa?</div>
+    <p class="faq-a">Sim. É fabricada em PU, material utilizado em bolas de categoria superior. O toque e o desempenho estão muito acima das bolas comuns de mercado.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Serve para jogar em campo?</div>
+    <p class="faq-a">Perfeitamente. Foi feita para quem busca qualidade em treinos e partidas, com peso e tamanho oficiais.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Vale o preço?</div>
+    <p class="faq-a">Bolas com características semelhantes costumam ser vendidas por muito mais. Aqui você leva qualidade profissional por um preço extremamente competitivo.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">É resistente?</div>
+    <p class="faq-a">Sim. Possui ótima construção e foi feita para suportar uso frequente sem desgaste rápido.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FRETE ═════════════════════════════════ -->
+<div class="frete">
+  <span>🚚</span>
+  <div>Frete grátis para <strong>Viçosa/MG</strong>. Entrega rápida e segura.</div>
+</div>
+
+<!-- ═══════════════════════════════ CTA FINAL ════════════════════════════ -->
+<section class="cta-final">
+  <div class="price-label">Apenas</div>
+  <div class="price-big">R$149,90</div>
+  <a class="btn-whatsapp" href="https://wa.me/5531995135007?text=Ol%C3%A1%20Matheus%2C%20vi%20a%20bola%20importada%20e%20quero%20garantir%20a%20minha!%20%E2%9A%BD" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.524 5.855L0 24l6.305-1.498A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.213-3.735.887.937-3.63-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    Falar com Matheus no WhatsApp
+  </a>
+  <p>📲 (31) 99513-5007 · Matheus Bozó</p>
+</section>
+
+<div class="sticky-spacer"></div>
+
+<!-- ═══════════════════════════════ STICKY BAR ═══════════════════════════ -->
+<div class="sticky-bar">
+  <a href="https://wa.me/5531995135007?text=Ol%C3%A1%20Matheus%2C%20quero%20garantir%20minha%20bola%20importada!%20%E2%9A%BD" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.555 4.122 1.524 5.855L0 24l6.305-1.498A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.374l-.36-.213-3.735.887.937-3.63-.235-.373A9.818 9.818 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    Garantir minha bola – R$149,90
+  </a>
+</div>
+
 </body>
 </html>
